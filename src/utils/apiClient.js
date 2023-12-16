@@ -3,7 +3,7 @@ export async function fetchReviews(appId, sinceHours = null) {
     let url = `${baseUrl}/${appId}/reviews`
 
     if (sinceHours) {
-        url.append(`?sinceHours=${sinceHours}`)
+        url += `?sinceHours=${sinceHours}`
     }
 
     return fetch(

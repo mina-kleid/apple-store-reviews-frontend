@@ -1,0 +1,29 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+}
+
+.author {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.review {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-weight: bold;
+    color: #333;
+}

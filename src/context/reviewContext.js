@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 import {fetchReviews} from "../utils/apiClient";
 
 export const ReviewContext = createContext({
-  
+
 });
 
 export const ReviewProvider = ({ children }) => {
@@ -19,12 +19,13 @@ export const ReviewProvider = ({ children }) => {
     } catch (error) {
       console.error('Error fetching reviews:', error);
       setError("Something went wrong");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (
-    <ReviewContext.Provider value={{ reviews, loading, fetchReviews: getReviews, error }}>
+    <ReviewContext.Provider value={{ reviews, loading, getReviews, error }}>
       {children}
     </ReviewContext.Provider>
   );
