@@ -1,5 +1,4 @@
 export const LoadingOrError = (loading, error) => {
-    console.log(error)
     if (error) {
         return (
             <div>

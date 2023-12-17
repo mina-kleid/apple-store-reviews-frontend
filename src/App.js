@@ -1,11 +1,11 @@
 import {ReviewProvider} from "./context/reviewContext";
 import React from "react";
 import {Reviews} from "./containers/Reviews/Reviews";
-import {Filter} from "./containers/Filter/Filter";
+import {Header} from "./containers/Header/Header";
 
 const App = () => (
 <ReviewProvider>
-    <Filter/>
+    <Header/>
     <Reviews/>
 </ReviewProvider>
 );
