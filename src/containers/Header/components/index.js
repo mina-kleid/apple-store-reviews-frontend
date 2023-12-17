@@ -24,15 +24,15 @@ export const Filters = (
             </select>
             <h2>Select Time Frame</h2>
             {timeFrames.map((frame) => (
-                <label key={frame}>
+                <label key={frame.value}>
                     <input disabled={isTimeFrameDisabled}
                         type="radio"
-                        value={frame}
+                        value={frame.label}
                         name="timeFrame"
-                        checked={selectedTimeFrame === frame}
+                        checked={selectedTimeFrame === frame.value}
                         onChange={() => onTimeFrameChanged(frame)}
                     />
-                    {frame}
+                    {frame.label}
                 </label>
             ))}
         </div>

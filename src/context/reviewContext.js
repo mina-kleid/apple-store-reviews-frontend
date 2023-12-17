@@ -10,10 +10,10 @@ export const ReviewProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const getReviews = async (appId) => {
+  const getReviews = async (appId, timeframe) => {
     setLoading(true);
     try {
-      const response = await fetchReviews(appId);
+      const response = await fetchReviews(appId, timeframe);
       const data = await response.json();
       setReviews(data.reviews);
     } catch (error) {

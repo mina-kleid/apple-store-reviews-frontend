@@ -40,3 +40,22 @@ export const APP_FILTERS = [
         "id": "401626263"
     }
 ]
+
+export const TIME_FRAME_FILTERS = [
+    {
+        "label": "2 days",
+        "value": 48
+    },
+    {
+        "label": "week",
+        "value": 168
+    },
+    {
+        "label": "month",
+        "value": 720
+    },
+    {
+        "label": "year",
+        "value": 8760
+    }
+]
