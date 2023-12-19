@@ -27,9 +27,9 @@ export const Header = () => {
         getReviews(selectedAppId, timeFrame.value);
     };
 
-    const handleOnRefreshClicked= () => {
-        refreshReviews(selectedAppId)
-        getReviews(selectedAppId)
+    const handleOnRefreshClicked= async () => {
+        await refreshReviews(selectedAppId)
+        await getReviews(selectedAppId)
     }
 
     return (
