@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import {fetchReviews} from "../utils/apiClient";
+import {fetchReviews, updateReviews} from "../utils/apiClient";
 
 export const ReviewContext = createContext({
 
@@ -24,8 +24,20 @@ export const ReviewProvider = ({ children }) => {
     }
   };
 
+  const refreshReviews = async (appId) => {
+    setLoading(true);
+    try {
+      await updateReviews(appId);
+    } catch (error) {
+      console.error('Error refreshing reviews:', error);
+      setError("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
-    <ReviewContext.Provider value={{ reviews, loading, getReviews, error }}>
+    <ReviewContext.Provider value={{ reviews, loading, getReviews, refreshReviews, error }}>
       {children}
     </ReviewContext.Provider>
   );

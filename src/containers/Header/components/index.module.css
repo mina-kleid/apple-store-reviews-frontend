@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
@@ -13,4 +13,8 @@
 
 .dropdown {
     margin-right: 20px;
+}
+
+.button {
+    margin-top: 16px;
 }
